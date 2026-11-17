@@ -1,0 +1,15 @@
+{
+  "name": "agencia-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Painel da agência de streamers: importa o relatório semanal (PDF) e mostra diamantes, ranking e alertas",
+  "scripts": {
+    "setup": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,site -c blue,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
